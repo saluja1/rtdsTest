@@ -78,7 +78,7 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 					<?php
 						for ($i = 0; $i < count($company); $i++) {
 	  							$image = wp_get_attachment_image_src( get_post_thumbnail_id(  $company[$i]->ID ) ); 
-								echo '<li><a href="#"><img src="'.$image[0].' ?>" /></a></li>';		
+								echo '<li><a href="#"><img src="'.$image[0].'" /></a></li>';		
 	  					}
 					?>
 				  </ul>
