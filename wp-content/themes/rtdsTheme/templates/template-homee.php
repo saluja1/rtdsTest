@@ -102,17 +102,20 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 
 					<?php
 						for ($i = 0; $i < count($feature); $i++) {
-							if ($i==0) { ?>
-								<li class="active"><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><?php echo get_the_title( $feature[$i]->ID ); ?> <img width="30px" src="<?php echo get_template_directory_uri(); ?>/assets/images/tabs-line.jpg" /> </a></li> <?php
+							$image = wp_get_attachment_image_src( get_post_thumbnail_id(  $feature[$i]->ID ) );
+							if ($i==0) { 
+
+								?>
+								<li class="active"><a  href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><img src="<?php echo $image[0]; ?>" /> <?php echo get_the_title( $feature[$i]->ID ); ?> <img class="activeIcon" width="30px" src="<?php echo get_template_directory_uri(); ?>/assets/images/tabs-line.jpg" /> </a></li> <?php
 							} else { ?>
-								<li><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><?php echo get_the_title( $feature[$i]->ID ); ?> <img width="30px" src="<?php echo get_template_directory_uri(); ?>/assets/images/tabs-line.jpg" /></a></li> <?php
+								<li><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"> <img src="<?php echo $image[0]; ?>" /> <?php echo get_the_title( $feature[$i]->ID ); ?> <img class="activeIcon" width="30px" src="<?php echo get_template_directory_uri(); ?>/assets/images/tabs-line.jpg" /></a></li> <?php
 							}	
 						}
 					?>
 					</ul>
 				</div>
 
-				<div class="col-xs-8">
+				<div class="col-md-8 col-xs-12">
 				  <!-- Tab panes -->
 				  <div class="tab-content">
 
@@ -202,8 +205,8 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 			                        <label><input type="checkbox" id="invoice">Your data is protected and secured in our <a href="#"> Privacy Policy.</a></label>
 			                    </div>
 								<div class="form-footer">
-									<a href="#" class="btn btn5">SUBMIT NOW</a>
-									<a href="#" class="btn btn6">SCHEDULE DEMO</a>
+									<button href="#" class="btn btn5">SUBMIT NOW</button>
+									<button href="#" class="btn btn6">SCHEDULE DEMO</button>
 								</div>
 						</form>
 					</div>

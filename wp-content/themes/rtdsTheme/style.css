@@ -1080,9 +1080,12 @@ h3 {
 	margin:0px;
 }
 .tabs-left>li>a img{
+	max-width: 40px;
+}
+.tabs-left>li>a img.activeIcon{
 	opacity: 0;
 }
-.tabs-left>li.active>a img{
+.tabs-left>li.active>a img.activeIcon{
 	opacity: 1;
 }
 .nav-tabs>li>a:hover {
@@ -1115,7 +1118,7 @@ margin-bottom: 20px;
 .tabSection li a{
 	color: #cccde2;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 26px;
 }
 .contactSection .contactLeft{
 	background-color: #ffffff;
