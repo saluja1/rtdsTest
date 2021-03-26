@@ -187,7 +187,7 @@ function rtds_sidebar_registration() {
 			$shared_args,
 
 			array(
-				'name'        => __( 'Footer #2', 'rtds' ),
+				'name'        => __( 'Copyright #2', 'rtds' ),
 				'id'          => 'sidebar-2',
 				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'rtds' ),
 			)

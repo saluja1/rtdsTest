@@ -8,7 +8,7 @@ var site = {
         });
 
         jQuery('.toggle-menu.toggle').click(function() {
-            jQuery('.cover-menu').animate({"right": "-100%" });
+            jQuery('.cover-menu').animate({"right": "-150%" });
             return false;
         });
 

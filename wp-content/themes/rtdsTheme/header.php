@@ -32,11 +32,13 @@
 			</div>
 			<div class="cover-inner">
 				<?php wp_nav_menu(array('theme_location' => 'primary', 'container'=> false, 'menu_class'=> 'overlay-menus', 'menu_id'=> 'overlay-menus')); ?>
+				<?php wp_nav_menu(array('theme_location' => 'right', 'container'=> false, 'menu_class'=> 'brand-menus rightMenu', 'menu_id'=> 'brand-menus'  )); ?>
+
 			</div>
 		</div>
 
 
-		<header class="brand-header">
+		<header class="brand-header pt-4 pb-4">
 
 			<div class="container-fluid">
 

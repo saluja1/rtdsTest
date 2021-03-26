@@ -19,7 +19,6 @@
     <?php dynamic_sidebar( 'sidebar-1' ); ?>
     </div> 
 <?php endif; ?>
-
     </section>
         
     <section class="footer-item">
@@ -48,9 +47,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 pad0">
+                <?php
+                    if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
                     <div class="copyright-text">
-                        <p>Copyright © 2021 Website. All rights reserved.</p>
-                    </div>
+                       <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                    </div> 
+                <?php endif; ?>
+
                 </div>
                 <div class="col-lg-5  ">
                     <?php wp_nav_menu(array('theme_location' => 'Legal', 'container'=> false, 'menu_class'=> 'legalLinks' )); ?>

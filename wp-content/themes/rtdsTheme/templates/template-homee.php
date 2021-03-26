@@ -95,16 +95,17 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 	</div>
 	<section id="contactSection" class="contactSection featureSection">
 		<div class="container">
-			<div  class="col-md-9 col-md-offset-1 tabSection">
-				<div class="col-xs-4"> <!-- required for floating -->
+			<div  class="col-lg-9 col-md-11 col-sm-12 col-md-offset-1 tabSection">
+				<div class="col-md-4 col-xs-12 nav-tabsm"> <!-- required for floating -->
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs tabs-left sideways">
+
 					<?php
 						for ($i = 0; $i < count($feature); $i++) {
 							if ($i==0) { ?>
-								<li class="active"><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><?php echo get_the_title( $feature[$i]->ID ); ?></a></li> <?php
+								<li class="active"><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><?php echo get_the_title( $feature[$i]->ID ); ?> <img width="30px" src="<?php echo get_template_directory_uri(); ?>/assets/images/tabs-line.jpg" /> </a></li> <?php
 							} else { ?>
-								<li><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><?php echo get_the_title( $feature[$i]->ID ); ?></a></li> <?php
+								<li><a href="#<?php  echo $feature[$i]->ID ?>" data-toggle="tab"><?php echo get_the_title( $feature[$i]->ID ); ?> <img width="30px" src="<?php echo get_template_directory_uri(); ?>/assets/images/tabs-line.jpg" /></a></li> <?php
 							}	
 						}
 					?>
@@ -137,7 +138,6 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 		</div>
 	</section>
 
-
 	<section class="IntegrationSection" id="IntegrationSection">
 
 			<div class="section-title text-center">
@@ -147,8 +147,6 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 				<div class="row">
 	    			<div class="IntegrationSectionInner">
 		    			<section class="toolsWrapper">
-
-
 				<?php
 					for ($i = 0; $i < count($tools); $i++) {
   							$image = wp_get_attachment_image_src( get_post_thumbnail_id(  $tools[$i]->ID ) ); 
@@ -193,19 +191,19 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 							<div class="section-title3 mb40">Try our cloud contact center software today.</div>
 								<div class="form-body">
 									<div class="row column2">
-										<input type="text" placeholder="First Name*">
-										<input type="text" placeholder="Last Name*">
+										<input type="text" placeholder=" Full name*">
+										<input type="tel" placeholder=" Phone number*">
 									</div>
-									<div class="row">
-										<input type="text" placeholder="Email Address*">
+									<div class="row ecolumn">
+										<input type="text" placeholder="@ Business email address*">
 									</div>
 								</div>
 			                    <div class="checkbox">
-			                        <label><input type="checkbox" id="invoice">Send me an invoice</label>
+			                        <label><input type="checkbox" id="invoice">Your data is protected and secured in our <a href="#"> Privacy Policy.</a></label>
 			                    </div>
 								<div class="form-footer">
-									<button class="btn btn1">SUBMIT NOW</button>
-									<button class="btn btn2">SCHEDULE DEMO</button>
+									<a href="#" class="btn btn5">SUBMIT NOW</a>
+									<a href="#" class="btn btn6">SCHEDULE DEMO</a>
 								</div>
 						</form>
 					</div>
@@ -220,6 +218,31 @@ $Integrationheading = get_post_meta(get_the_ID(), 'Integrationheading', TRUE);
 	        </div>
 		</div>
 	</section>
+
+	<div class="box vc-widget">
+		<div class="row">
+			<div class="col-sm-8">
+			<p>Robert Saint Park</p>
+			</div>
+			<div class="col-sm-4">
+			<p>On Call</p>
+			</div>
+		</div>
+
+		<div class="box-footer plan-purchase text-center">
+			<div class=" pt-4 pb-4">
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/vc-video-icon.jpg" /></a><span>03:23</span>
+				</div>
+				<div class="">
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/vc-mute-icon.jpg" /></a>
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/vc-cut-icon.jpg" /></a>
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/vc-add-call-icon.jpg" /></a>
+
+			</div>
+		</div>
+
+	</div>
+
 
 </main>
 
